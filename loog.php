@@ -32,7 +32,75 @@ function test_input($data) {
 <input type="submit" name="submit" value="Submit">
 <a href="forhet.php">forget password</a><br>
 <a href="signn.php">create</a>
+
+
+<?php
+$error='';
+$message='';
+
+
+
+if(isset($_POST["submit"]))
+{
+$data = file_get_contents("userdata.json");
+// echo $data;
+$data = json_decode($data, true);
+foreach($data as $row)
+{
+
+$row["Name"];
+$row["Email"];
+$row["phone number"];
+$row["Password"];
+$row["Gender"];
+$row["Dob"];
+
+
+
+}
+
+
+
+
+if($_POST["email"] == $row["Email"] && $_POST["password"] == $row["Password"])
+
+
+
+{
+
+
+
+$message="<label class='text-danger'>Successful</label>";
+
+
+
+}
+else{
+
+
+
+$error = "<label class='text-danger'>Incorrect user name or password</label>";
+
+
+
+}
+}
+else{
+
+
+
+echo ' ';
+}
+
+
+
+?>
+
+
 </body>
+
+
+
 
 </html>
 
